@@ -5,14 +5,13 @@ import Button from '../../components/Button';
 import Footer from '../../components/Footer';
 import * as Animatable from 'react-native-animatable';
 
-
 const AnimatedAll = Animatable.createAnimatableComponent(ScrollView)
 
 
 export default function Details({ navigation }){
 //mudando o titulo da página
     navigation.setOptions({
-        headerTitle: 'POKEMON - LETS GO PIKACHU'
+        headerTitle: 'DEATH STRANDING'
     })
 
     return(
@@ -20,36 +19,39 @@ export default function Details({ navigation }){
                      animation="bounceInUp"
                      duration={2000}>
             <Image 
-              source={require('../../imgs/pokemon.jpg')}
+              source={require('../../imgs/death.png')}
               style={styles.img}
               resizeMode= "cover"
             />
 
             <View>
                 <View>
-                    <Text style={styles.price}>R$129,99</Text>
+                    <Text style={styles.price}>R$60,00</Text>
                 </View>
 
                 <View opacity={0.5}>
-                    <Text style={styles.title}>POKEMON - LET'S GO PIKACHU</Text>
+                    <Text style={styles.title}>DEATH STRANDING</Text>
                 </View>
 
 
                 <View style={{flexDirection: 'row', width: '100%'}}>
                     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                        <ConsolesButton bgColor="#17181A" color="#FFFFFF">SWITCH</ConsolesButton>
+                        <ConsolesButton bgColor="#17181A" color="#FFFFFF">PS5</ConsolesButton>
+                        <ConsolesButton>X-BOX ONE</ConsolesButton>
+                        <ConsolesButton>SWITCH</ConsolesButton>
+                        <ConsolesButton>PS4</ConsolesButton>
                     </ScrollView>
                 </View>
 
                 <View style={styles.txtContent}>
-                    <Text style={styles.txtTitle}>POKEMON - LET'S GO PIKACHU</Text>
+                    <Text style={styles.txtTitle}>DEATH STRANDING</Text>
                     <Text style={styles.txtDescription}>
-                    Pokémon: Let's Go, Pikachu! Leve a sua jornada Pokémon para a região de Kanto ao lado do seu 
-                    parceiro cheio de energia, o Pikachu! ... Pokémon selvagens de tamanho natural vagam pelo jogo - capture-os 
-                    como um verdadeiro Treinador de Pokémon usando tempo correto e uma Poké Ball bem colocada.
+                    Cercado pela morte, Sam Bridges deverá enfrentar um mundo completamente transformado pelo Death Stranding 
+                    (um evento apocalíptico). Carregando as últimas esperanças de um futuro, Sam embarca em uma jornada para 
+                    reconstruir o mundo aniquilado, um passo de cada vez.
                     </Text>
-                    <Text style={[styles.txtList, { marginTop: 5 }]}>- CATEGORIA: RPG, AVENTURA </Text>
-                    <Text style={styles.txtList}>- EMPRESA: NINTENDO </Text>
+                    <Text style={[styles.txtList, { marginTop: 5 }]}>- CATEGORIA: AÇÃO-AVENTURA </Text>
+                    <Text style={styles.txtList}>- EMPRESA: KOJIMA PRODUCTIONS </Text>
                 </View>
 
                 <Button />
@@ -71,7 +73,7 @@ const styles = StyleSheet.create({
     },
     img: {
         width: '100%',
-        height: 400
+        height: 380
     },
     price: {
         fontFamily: 'Karla_400Regular',

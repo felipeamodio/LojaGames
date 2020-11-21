@@ -12,10 +12,6 @@ import Games from '../../components/Games';
 import { useNavigation } from '@react-navigation/native';
 
 
-
-
-
-
 export default function Home(){
   const navigation = useNavigation();
 
@@ -55,7 +51,7 @@ export default function Home(){
 
           <ScrollView>
               <Text style={styles.txtLancamentos}>LANÇAMENTOS</Text>
-              <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+              <View style={{flexDirection: 'row', justifyContent: 'space-around', marginTop: 5}}>
               <Games img={require('../../imgs/fifa21.jpg')} cost="R$199,99" onClick={() => navigation.navigate('Details')}>
                     FIFA 21
                 </Games>
@@ -95,6 +91,25 @@ export default function Home(){
                 </Games>
               </View>
 
+              <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+              <Games img={require('../../imgs/death.png')} cost="R$60,00" onClick={() => navigation.navigate('Death')}>
+                    Death Stranding
+                </Games>
+
+                <Games img={require('../../imgs/avengers.png')} cost="R$199,99" onClick={() => navigation.navigate('Avengers')}> 
+                    Marvel's Avengers
+                </Games>
+              </View>
+
+              <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+              <Games img={require('../../imgs/dragonball.png')} cost="R$159,99" onClick={() => navigation.navigate('Dragonball')}>
+                    Dragon Ball Z - KAKAROT
+                </Games>
+
+                <Games img={require('../../imgs/ghost.png')} cost="R$215,00" onClick={() => navigation.navigate('Ghost')}> 
+                    Ghost of Tsushima
+                </Games>
+              </View>
               
           </ScrollView>
         </View>

@@ -3,6 +3,9 @@ import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet } from 'rea
 import ConsolesButton from '../../components/ConsolesButton';
 import Button from '../../components/Button';
 import Footer from '../../components/Footer';
+import * as Animatable from 'react-native-animatable';
+
+const AnimatedAll = Animatable.createAnimatableComponent(ScrollView)
 
 
 export default function Details({ navigation }){
@@ -12,7 +15,9 @@ export default function Details({ navigation }){
     })
 
     return(
-        <ScrollView style={styles.container}>
+        <AnimatedAll style={styles.container}
+                     animation="bounceInUp"
+                     duration={2000}>
             <Image 
               source={require('../../imgs/spidermanps5.png')}
               style={styles.img}
@@ -56,7 +61,7 @@ export default function Details({ navigation }){
                 <Footer />
             </View>
 
-        </ScrollView>
+        </AnimatedAll>
     );
 }
 

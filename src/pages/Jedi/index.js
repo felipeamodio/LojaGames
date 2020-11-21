@@ -3,16 +3,23 @@ import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet } from 'rea
 import ConsolesButton from '../../components/ConsolesButton';
 import Button from '../../components/Button';
 import Footer from '../../components/Footer';
+import * as Animatable from 'react-native-animatable';
 
+
+const AnimatedAll = Animatable.createAnimatableComponent(ScrollView)
 
 export default function Details({ navigation }){
+
 //mudando o titulo da página
     navigation.setOptions({
         headerTitle: 'STAR WARS JEDI: FALLEN ORDER'
     })
 
     return(
-        <ScrollView style={styles.container}>
+        <AnimatedAll style={styles.container}
+                     animation="bounceInUp"
+                     duration={2000}
+                    >
             <Image 
               source={require('../../imgs/jedi.png')}
               style={styles.img}
@@ -21,7 +28,7 @@ export default function Details({ navigation }){
 
             <View>
                 <View>
-                    <Text style={styles.price}>R$159,99</Text>
+                    <Animatable.Text style={styles.price}>R$159,99</Animatable.Text>
                 </View>
 
                 <View opacity={0.5}>
@@ -56,7 +63,7 @@ export default function Details({ navigation }){
                 <Footer />
             </View>
 
-        </ScrollView>
+        </AnimatedAll>
     );
 }
 
