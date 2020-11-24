@@ -3,6 +3,7 @@ import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet } from 'rea
 import ConsolesButton from '../../components/ConsolesButton';
 import Button from '../../components/Button';
 import Footer from '../../components/Footer';
+import Quantidade from '../../components/Quantidade';
 import * as Animatable from 'react-native-animatable';
 
 
@@ -51,6 +52,10 @@ export default function Details({ navigation }){
                     <Text style={[styles.txtList, { marginTop: 5 }]}>- CATEGORIA: RPG, AVENTURA </Text>
                     <Text style={styles.txtList}>- EMPRESA: NINTENDO </Text>
                 </View>
+
+                <View style={styles.line}/>
+
+                <Quantidade inicial={0}/>
 
                 <Button />
 
@@ -106,7 +111,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Karla_400Regular'
     },
     line: {
-        borderWidth: 1.5,
+        borderWidth: 1,
         borderBottomColor: '#191970',
         marginVertical: '2%'
     }

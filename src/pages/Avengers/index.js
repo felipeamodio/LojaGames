@@ -3,6 +3,7 @@ import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet } from 'rea
 import ConsolesButton from '../../components/ConsolesButton';
 import Button from '../../components/Button';
 import Footer from '../../components/Footer';
+import Quantidade from '../../components/Quantidade';
 import * as Animatable from 'react-native-animatable';
 
 const AnimatedAll = Animatable.createAnimatableComponent(ScrollView)
@@ -55,6 +56,8 @@ export default function Details({ navigation }){
                     <Text style={[styles.txtList, { marginTop: 5 }]}>- CATEGORIA: RPG </Text>
                     <Text style={styles.txtList}>- EMPRESA: CRYSTAL DYNAMICS </Text>
                 </View>
+
+                <Quantidade inicial={0}/>
 
                 <Button />
 

@@ -36,7 +36,7 @@ export default function Home(){
                         {color: '#CECECF', 
                         fontSize: 26, 
                         marginHorizontal: '1%',
-                        fontFamily: 'Karla_700Bold' }}>CONSOLE</Text>
+                        fontFamily: 'Karla_700Bold' }}>LANÇAMENTOS</Text>
 
                     <TouchableOpacity style={{position: "absolute", right: 0, alignSelf: 'center'}}>
                         <MaterialIcons 

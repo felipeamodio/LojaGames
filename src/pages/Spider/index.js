@@ -4,6 +4,7 @@ import ConsolesButton from '../../components/ConsolesButton';
 import Button from '../../components/Button';
 import Footer from '../../components/Footer';
 import * as Animatable from 'react-native-animatable';
+import Quantidade from '../../components/Quantidade';
 
 const AnimatedAll = Animatable.createAnimatableComponent(ScrollView)
 
@@ -53,6 +54,8 @@ export default function Details({ navigation }){
                     <Text style={[styles.txtList, { marginTop: 5 }]}>- CATEGORIA: AÇÃO-AVENTURA </Text>
                     <Text style={styles.txtList}>- EMPRESA: INSOMNIAC GAMES </Text>
                 </View>
+
+               <Quantidade inicial={0}/>
 
                 <Button />
 

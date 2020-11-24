@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { useLinkProps, useNavigation } from '@react-navigation/native';
 
 export default function Button(){
+
     return(
         <View style={styles.container}>
             <TouchableOpacity style={styles.btnContainer}>
-                <Text style={styles.txtButton}>COMPRAR</Text>
+                <Text style={styles.txtButton}>ADICIONAR AO CARRINHO</Text>
             </TouchableOpacity>
         </View>
     )
@@ -21,7 +23,7 @@ const styles = StyleSheet.create({
         height: 50,
         backgroundColor: '#17181A',
         borderRadius: 5,
-        marginVertical: '5%',
+        marginVertical: '10%',
         justifyContent: 'center',
         alignItems: 'center'
     },

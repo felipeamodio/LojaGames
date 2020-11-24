@@ -14,6 +14,7 @@ import Death from './pages/Death';
 import Avengers from './pages/Avengers';
 import Ghost from './pages/Ghost';
 import Dragonball from './pages/Dragonball';
+import ShoppCar from './pages/ShoppCar';
 import { Feather } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
 
@@ -153,6 +154,7 @@ function Routes(){
                                     name="shopping-cart"
                                     size={24}
                                     color="#000000"
+
                                 />
                             </TouchableOpacity>
                         )
